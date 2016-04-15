@@ -13,7 +13,7 @@ angular.module('app.controllers', [])
         genero: "Aventura Gráfica",
         votos: 0
     }, {
-        nombre: "Metal Gear Solid V : The Phantom Pain",
+        nombre: "Metal Gear Solid V: The Phantom Pain",
         fechaLanzamiento: "Septiembre 2015",
         genero: "Sigilo",
         votos: 15
@@ -49,6 +49,7 @@ angular.module('app.controllers', [])
             }
         }
         $scope.votarModal.hide();
+        $scope.juego.votos = 0;
     };
 
     $scope.juegoSelect = function(item) {
@@ -69,11 +70,9 @@ angular.module('app.controllers', [])
     }
 
     $scope.anadirJuego = function() {
-        	console.log($scope.juego);
-            $scope.games.push[$scope.juego];
-            console.log($scope.games);
-            $scope.nuevoModal.hide();
-        
+        $scope.games.push($scope.juego);
+        $scope.nuevoModal.hide();
+
     }
 
 
