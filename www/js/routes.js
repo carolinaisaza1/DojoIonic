@@ -8,18 +8,11 @@ angular.module('app.routes', [])
     // Each state's controller can be found in controllers.js
     $stateProvider
 
-
-
-
-
-        .state('menu', {
+     .state('menu', {
         url: '/menu',
         abstract: true,
         templateUrl: 'templates/menu.html'
     })
-
-
-
 
     .state('menu.page', {
         url: '/index',
@@ -29,16 +22,8 @@ angular.module('app.routes', [])
                 controller: 'pageCtrl'
             }
         }
-    })
-
-
-    ;
+    });
 
     // if none of the above states are matched, use this as the fallback
-
-    $urlRouterProvider.otherwise('/menu');
-
-
-
-
+    $urlRouterProvider.otherwise('/menu/index');
 });

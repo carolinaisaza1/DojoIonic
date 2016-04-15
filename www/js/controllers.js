@@ -6,16 +6,19 @@ angular.module('app.controllers', [])
         nombre: "Fifa 2016",
         fechaLanzamiento: "Septiembre 2015",
         genero: "Deportes",
+        imagen: "http://static4.gamelosofy.com/wp-content/uploads/fifa-2016-trucos-600x480.jpg",
         votos: 5
     }, {
         nombre: "Life Is Strange",
         fechaLanzamiento: "Enero 2015",
         genero: "Aventura Gráfica",
+        imagen: "http://gamerescape.com/wp-content/uploads/2014/08/lifeisstrange.jpg",
         votos: 0
     }, {
         nombre: "Metal Gear Solid V: The Phantom Pain",
         fechaLanzamiento: "Septiembre 2015",
         genero: "Sigilo",
+        imagen: "http://im.ziffdavisinternational.com/ign_es/screenshot/default/mgsv-mgo-tga-screen-12_8ewt.jpg",
         votos: 15
     }];
 
@@ -23,6 +26,7 @@ angular.module('app.controllers', [])
         nombre: '',
         fechaLanzamiento: '',
         genero: '',
+        imagen: '',
         votosAcumulados: 0,
         votos: 0
     };
@@ -64,6 +68,7 @@ angular.module('app.controllers', [])
         $scope.juego.nombre = '';
         $scope.juego.fechaLanzamiento = '';
         $scope.juego.genero = '';
+        $scope.juego.imagen = '';
         $scope.juego.votosAcumulados = 0;
         $scope.juego.votos = 0;
         $scope.nuevoModal.show();
@@ -74,6 +79,4 @@ angular.module('app.controllers', [])
         $scope.nuevoModal.hide();
 
     }
-
-
 })
