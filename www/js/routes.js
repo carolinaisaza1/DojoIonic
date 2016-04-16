@@ -10,7 +10,6 @@ angular.module('app.routes', [])
 
      .state('menu', {
         url: '/menu',
-        abstract: true,
         templateUrl: 'templates/menu.html'
     })
 
@@ -20,6 +19,15 @@ angular.module('app.routes', [])
             'side-menu21': {
                 templateUrl: 'templates/page.html',
                 controller: 'pageCtrl'
+            }
+        }
+    })
+
+    .state('menu.acerca', {
+        url: '/acerca',
+        views: {
+            'side-menu21': {
+                templateUrl: 'templates/acerca.html'
             }
         }
     });
