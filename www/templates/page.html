@@ -4,17 +4,17 @@
         </button>
     </ion-nav-buttons>
     <ion-content>
-        <div class="list" ng-init="">
-            <ion-list show-reorder="data.showReorder">
+        <div>
+            <ion-list>
                 <ion-item ng-repeat="game in games | orderBy:'-votos'" item="games" ng-click="juegoSelect(game)">
-                    <a class="item item-avatar item-checkbox item item-text-wrap">
+                    <a class="item item-avatar item-wrap">
                         <n>{{$index + 1}}</n>
-                        <img ng-src="{{game.imagen}}" width="100" height="100" style="margin-left: 0px; margin-top: 0px">
-                        <label class="rank" style="margin-top:-100px; margin-left:120px;">
+                        <img ng-src="{{game.imagen}}" width="100" height="100">
+                        <label class="rank padding" style="margin-top:-100px; margin-left:120px;">
                             <h2>{{game.nombre}}</h2>
-                            <h3>Género: {{game.genero}} </h3>
-                            <h3>Fecha de Lanzamiento: {{game.fechaLanzamiento}}</h3>
-                            <h3>{{game.votos}} Votos</h3>
+                            <h4>Género: {{game.genero}} </h4>
+                            <h4>Fecha de Lanzamiento: {{game.fechaLanzamiento}}</h4>
+                            <h4>{{game.votos}} Votos</h4>
                         </label>
                     </a>
                 </ion-item>
@@ -42,9 +42,9 @@
                         </label>
                         <div class="range">
                             <i class="icon ion-android-remove-circle"></i>
-                            <input type="range" ng-model="juego.votos" min="1" max="5" value="3">
+                            <input type="range" ng-model="juego.votos" min="0" max="5">
                             <i class="icon ion-android-add-circle"></i>
-                            <span class="input-label" type="text">{{juego.votos}}</span>
+                            <span class="input-label" style="margin-left: 40px" type="text">{{juego.votos}}</span>
                         </div>
                     </div>
                     <div class="button-bar">

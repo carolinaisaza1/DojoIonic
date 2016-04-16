@@ -16,7 +16,7 @@ angular.module('app.routes', [])
     .state('menu.page', {
         url: '/index',
         views: {
-            'side-menu21': {
+            'side-menu': {
                 templateUrl: 'templates/page.html',
                 controller: 'pageCtrl'
             }
@@ -26,7 +26,7 @@ angular.module('app.routes', [])
     .state('menu.acerca', {
         url: '/acerca',
         views: {
-            'side-menu21': {
+            'side-menu': {
                 templateUrl: 'templates/acerca.html'
             }
         }
