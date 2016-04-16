@@ -7,14 +7,14 @@
         <div class="list" ng-init="">
             <ion-list show-reorder="data.showReorder">
                 <ion-item ng-repeat="game in games | orderBy:'-votos'" item="games" ng-click="juegoSelect(game)">
-                    <a class="item item-avatar item-checkbox">
+                    <a class="item item-avatar item-checkbox item item-text-wrap">
                         <n>{{$index + 1}}</n>
-                        <img ng-src="{{game.imagen}}" width="100" height="100" style="margin-left: 0px; margin-top: 20px">
+                        <img ng-src="{{game.imagen}}" width="100" height="100" style="margin-left: 0px; margin-top: 0px">
                         <label class="rank" style="margin-top:-100px; margin-left:120px;">
-                            <h1>{{game.nombre}}</h1>
-                            <h2>Género: {{game.genero}} </h2>
-                            <h2>Fecha de Lanzamiento: {{game.fechaLanzamiento}}</h2>
-                            <h2>{{game.votos}} Votos</h2>
+                            <h2>{{game.nombre}}</h2>
+                            <h3>Género: {{game.genero}} </h3>
+                            <h3>Fecha de Lanzamiento: {{game.fechaLanzamiento}}</h3>
+                            <h3>{{game.votos}} Votos</h3>
                         </label>
                     </a>
                 </ion-item>
